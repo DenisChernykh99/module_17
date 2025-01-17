@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Optional
+# Импортировали модели и инструменты для их настройки
 
 
 class CreateUser(BaseModel):
@@ -9,8 +10,8 @@ class CreateUser(BaseModel):
     age: int
 
 
-class UpdateUser(CreateUser):
-    username: Optional[str] = Field(default=None, exclude=True)
+class UpdateUser(CreateUser):  # Наследуем атрибуты, переопределяя username на None
+    username: Optional[str] = Field(default=None, exclude=True)  # И исключаем его из сериализации с помощью exclude
 
 
 class CreateTask(BaseModel):

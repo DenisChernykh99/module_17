@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+# Импортировали и создали экземпляр класса роутер, который поможет развить архитектуру проекта
 router = APIRouter(prefix="/task", tags=["task"])
 
 @router.get("/")
